@@ -1,20 +1,27 @@
 <?php
-require "./core/function.php";
+require "./core/init.php";
 
-$phones = selectAll("phones");
-$providers = selectAll("providers");
+//$phones = selectAll("phones");
+$phones = $Phone->getAll();
+//$providers = selectAll("providers");
+$providers = $Provider->getAll();
 
 if($_SERVER["REQUEST_METHOD"]==="POST"){
-    $user=$_POST["user"];
-    $phone=$_POST["phone"];
-    $provider=$_POST["provider"];
-    $start_date=$_POST["start_date"];
-    $end_date=$_POST["end_date"];
+    $data=[
+        "user"=>$_POST["user"],
+        "phone"=>$_POST["phone"],
+        "provider"=>$_POST["provider"],
+        "start_date"=>$_POST["start_date"],
+        "end_date"=>$_POST["end_date"],
+    
+    ];
 
-    $sql = "INSERT INTO rents (user, phone, provider, start_date, end_date) VALUES ('$user', '$phone', '$provider', '$start_date', '$end_date')";
-    $query = mysqli_query($db, $sql);
+    $Rents->addNewRent($data);
 
-    redirec("index.php");
+    // $sql = "INSERT INTO rents (user, phone, provider, start_date, end_date) VALUES ('$user', '$phone', '$provider', '$start_date', '$end_date')";
+    // $query = mysqli_query($db, $sql);
+
+    redirect("index.php");
 }
 
 //dd($_POST);

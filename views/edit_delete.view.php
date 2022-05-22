@@ -14,6 +14,8 @@
                         <th>Provider</th>
                         <th>Start date</th>
                         <th>End date</th>
+                        <th>Edit/th>
+                        <th>Delete</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -25,6 +27,7 @@
                             <th><?php echo $rent->provider; ?></th>
                             <th><?php echo displayDate($rent->start_date); ?></th>
                             <th><?php echo displayDate($rent->end_date); ?></th>
+                            <td><a class="btn btn-warning" href="edit_rent.php"></a></td>
                         </tr>
                     <?php endforeach; ?>
                     </tbody>

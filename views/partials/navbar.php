@@ -12,14 +12,17 @@
             <li class="nav-item">
                 <a class="nav-link" href="add_rent.php">Add rent</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item">
+                <a class="nav-link" href="edit_delete.php">Edit / Delete</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
                    aria-expanded="false">Dropdown</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownId">
                     <a class="dropdown-item" href="#">Action 1</a>
                     <a class="dropdown-item" href="#">Action 2</a>
                 </div>
-            </li>
+            </li> -->
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search">
