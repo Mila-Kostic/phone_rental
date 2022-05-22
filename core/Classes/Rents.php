@@ -14,5 +14,16 @@ class Rents extends QueryBuilder {
         }
             return false;
     }
+    function deleteRent($id){
+          //dd($id);
+          $sql = "DELETE FROM rents WHERE id = :id";
+          $query= $this->db->prepare($sql);
+          $query->bindParam("id",$id,PDO::PARAM_INT);
+          $query->execute();
+          if($query->rowCount()===1){
+            return true;
+        }
+            return false;
+    }
 }
 ?>

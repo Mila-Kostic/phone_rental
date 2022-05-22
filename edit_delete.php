@@ -9,5 +9,5 @@ require "./core/init.php";
 
 $rents=$Rents->getAll();
 
-require "./views/index.view.php";
+require "./views/edit_delete.view.php";
 ?>
